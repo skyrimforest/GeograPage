@@ -6,6 +6,12 @@
   <div class="info-box">
     <DispInfoBox></DispInfoBox>
   </div>
+  <div class="func-box">
+    <DispFuncBox></DispFuncBox>
+  </div>
+  <div class="func-show-box">
+    <DispFuncShowBox></DispFuncShowBox>
+  </div>
   <div class="map-box">
     <MapContainer></MapContainer>
   </div>
@@ -16,12 +22,17 @@
 import MapContainer from '../views/MapContainer.vue';
 import DispMenuBox from '../views/DispMenuBox.vue';
 import DispInfoBox from '../views/DispInfoBox.vue';
+import DispFuncBox from '../views/DispFuncBox.vue';
+import DispFuncShowBox from '../views/DispFuncShowBox.vue';
 export default {
   name: "MainPage",
   components: {
     MapContainer,
     DispMenuBox,
     DispInfoBox,
+    DispFuncBox,
+    DispFuncShowBox,
+    
   },
   methods: {},
   data: () => ({
@@ -42,6 +53,7 @@ export default {
 .menu-box{
   position: absolute;
   top: 50px;
+  left:20px;
   backdrop-filter: blur(10px);
   border-radius: 10px; 
   z-index: 2;
@@ -49,13 +61,30 @@ export default {
 .info-box{
   position: absolute;
   top: 50px;
+  right: 20px;
+  /* backdrop-filter: blur(30px);
+  border-radius: 10px;  */
+  z-index: 3;
+}
+.func-box{
+  position: absolute;
+  bottom: 20px;
+  left:20px;
   backdrop-filter: blur(30px);
   border-radius: 10px; 
-  right: 20px;
+  z-index: 3;
+}
+.func-show-box{
+  position: absolute;
+  bottom:330px;
+  left:15px;
+  /* backdrop-filter: blur(30px); */
+  /* border-radius: 10px;  */
   z-index: 3;
 }
 .map-box{
   position: relative;
   z-index: 1;
 }
+
 </style>
