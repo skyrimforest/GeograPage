@@ -53,8 +53,8 @@ export default {
               ).then(res => {
                 this.msta="success";
                 console.log(res);
-                this.$router.replace({name: 'MainPage'});
-              })
+              });
+              this.$router.replace({name: 'MainPage'});
         }
     }
 }
