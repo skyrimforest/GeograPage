@@ -1,7 +1,9 @@
 <template>
   <div class="button-container">
     <ElRow>
-      <ElButton class="custom-button"> 地图模式切换 </ElButton>
+      <ElButton class="custom-button" @click="testClick">
+        地图模式切换
+      </ElButton>
     </ElRow>
     <ElRow>
       <ElButton class="custom-button"> 地图界面放大 </ElButton>
@@ -35,6 +37,8 @@
 
 <script>
 import { ElButton, ElRow, ElCol } from "element-plus";
+import axios from "axios";
+import APIS from "@/modules/api.js";
 export default {
   name: "DispMenuBox",
   components: {
@@ -42,16 +46,26 @@ export default {
     ElCol,
     ElRow,
   },
+  methods: {
+    testClick() {
+      const data = {
+        user: "skyrim",
+      };
+      axios.post(APIS.blog, data).then((res) => {
+        console.log(res);
+      });
+    },
+  },
 };
 </script>
 
 <style>
-.button-container{
-  background-color:rgba(20,20,20,0.8) ;
+.button-container {
+  background-color: rgba(20, 20, 20, 0.8);
   backdrop-filter: blur(30px);
-  border-radius: 10px; 
+  border-radius: 10px;
 }
-.custom-button{
-  width:120px;
+.custom-button {
+  width: 120px;
 }
 </style>

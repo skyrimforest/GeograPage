@@ -1,6 +1,7 @@
-const URL_PREFIX = "http://127.0.0.1:4523/m1/3333148-0-default/";
+const URL_PREFIX = "http://127.0.0.1:9000/";
 const APIS = {
     login:"api/login",
+    blog:"group1/blog",
     // login: "api/login",
     // nlp: "api/nlp",
     // cv: "api/cv",

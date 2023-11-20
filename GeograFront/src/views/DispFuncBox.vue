@@ -1,7 +1,6 @@
 <template>
   <div class="func-container">
     <ElContainer>
-       
       <ElMain>
         <ElRow>
           <ElCol :span="8">
@@ -60,14 +59,14 @@ export default {
 
 <style>
 .func-container {
-    background-color: rgba(20,20,20,0.8);
-    backdrop-filter: blur(30px);
-  border-radius: 10px; 
+  background-color: rgba(20, 20, 20, 0.8);
+  backdrop-filter: blur(30px);
+  border-radius: 10px;
   width: 900px;
   height: 300px;
 }
-.placeholder-box{
-    width: 300px;
-    height: 150px;
+.placeholder-box {
+  width: 300px;
+  height: 150px;
 }
 </style>

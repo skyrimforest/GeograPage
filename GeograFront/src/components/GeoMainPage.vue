@@ -1,5 +1,6 @@
 <template>
  <div class="common-layout">
+  <AttrInputBox></AttrInputBox>
   <div class="menu-box">
     <DispMenuBox></DispMenuBox>
   </div>
@@ -24,6 +25,7 @@ import DispMenuBox from '../views/DispMenuBox.vue';
 import DispInfoBox from '../views/DispInfoBox.vue';
 import DispFuncBox from '../views/DispFuncBox.vue';
 import DispFuncShowBox from '../views/DispFuncShowBox.vue';
+import AttrInputBox from '../views/AttrInputBox.vue';
 export default {
   name: "MainPage",
   components: {
@@ -32,9 +34,10 @@ export default {
     DispInfoBox,
     DispFuncBox,
     DispFuncShowBox,
-    
+    AttrInputBox
   },
-  methods: {},
+  methods: {
+  },
   data: () => ({
   }),
 };
