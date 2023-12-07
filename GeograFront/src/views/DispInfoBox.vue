@@ -1,7 +1,7 @@
 <template>
   <div class="info-container">
     <ElContainer>
-      <ElHeader style="padding: 10px">
+      <ElHeader>
         <ElRow class="head-box">
           <ElCol :span="3">
             <ElIcon><Hide /></ElIcon>
@@ -156,7 +156,11 @@ export default {
 };
 </script>
 
-<style>
+<style scoped>
+.el-header {
+  padding: 10px;
+  height: 50px;
+}
 .info-container {
   width: 300px;
   height: 300px;

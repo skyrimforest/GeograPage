@@ -4,12 +4,12 @@
 
 <script>
 export default {
-  name:'App',
-  components:{},
+  name: "App",
+  components: {},
   mounted() {
-    this.$router.replace({name:'LoginPage'})
+    this.$router.replace({ name: "LoginPage" });
   },
-}
+};
 </script>
 
 <style scoped>
