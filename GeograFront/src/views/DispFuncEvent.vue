@@ -1,7 +1,21 @@
 <template>
   <div class="func-container">
     <ElContainer>
-      <ElHeader>无人机</ElHeader>
+      <ElHeader>
+        <ElRow>
+          <ElCol :span="4"> 无人机事件列表 </ElCol>
+          <ElCol :span="20">
+            <el-switch
+              v-model="judge"
+              active-text="机型"
+              inactive-text="时间"
+              size="small"
+              inline-prompt
+              style="--el-switch-on-color: #13ce66; --el-switch-off-color: #0049ff"
+            />
+          </ElCol>
+        </ElRow>
+      </ElHeader>
       <ElMain style="--el-main-padding: 0px">
         <ElScrollbar height="170px">
           <ElTable
@@ -38,7 +52,9 @@
 </template>
 
 <script setup>
+import { ElSwitch } from "element-plus";
 import { ref } from "vue";
+var judge=ref(true)
 const droneData = [
   {
     test1: "test1",
@@ -50,9 +66,9 @@ const droneData = [
 </script>
     
 <style scoped>
-.el-header{
-    height: 40px;
-    padding: 10px;
+.el-header {
+  height: 45px;
+  padding: 10px;
 }
 .func-container {
   background-color: rgba(20, 20, 20, 0.8);

@@ -1,5 +1,7 @@
 <template>
-  <div id="container"></div>
+  <!-- <div id="container"></div> -->
+  <baidu-map class="bm-view" :zoom="12" :center="{ lng: 116.404, lat: 39.915 }" min-zoom="5" max-zoom="20" mapType="BMAP_SATELLITE_MAP">
+  </baidu-map>
 </template>
   <script>
 import AMapLoader from "@amap/amap-jsapi-loader";
@@ -78,10 +80,14 @@ export default {
 </script>
   
   <style scoped>
-#container {
+.bm-view {
+  width: 100%;
+  height: 800px;
+}
+/* #container {
   padding: 0px;
   margin: 0px;
   width: 100%;
   height: 800px;
-}
+} */
 </style>
