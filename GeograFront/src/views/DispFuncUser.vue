@@ -19,6 +19,22 @@
                   <ElButton type="warning">确认提交</ElButton></ElCol
                 >
               </ElRow>
+              <ElRow>
+                <br />
+              </ElRow>
+              <ElRow>
+                <ElCol :span="6"> 请输入欲移除的用户名: </ElCol>
+                <ElCol :span="8"
+                  ><ElInput
+                    v-model="username"
+                    placeholder="请输入用户名"
+                  ></ElInput
+                ></ElCol>
+                <ElCol :span="6"> </ElCol>
+                <ElCol :span="4">
+                  <ElButton type="warning">确认提交</ElButton></ElCol
+                >
+              </ElRow>
             </el-card>
           </ElCol>
         </ElRow>
@@ -57,6 +73,17 @@
                 >
               </ElRow>
             </el-card>
+            <!-- <el-card class="box-card">
+              <ElRow>
+                <ElCol :span="14"></ElCol>
+                <ElCol :span="6"></ElCol>
+                <ElCol :span="4">
+                  <ElButton type="warning" @click="logOut"
+                    >退出登陆</ElButton
+                  ></ElCol
+                >
+              </ElRow>
+            </el-card> -->
           </ElCol>
         </ElRow>
       </ElMain>
@@ -69,16 +96,14 @@
 <script setup>
 import { ElButton } from "element-plus";
 import { ref } from "vue";
+import { useRouter, useRoute } from "vue-router";
+const router = useRouter();
 var tarpwd = ref("");
 var oripwd = ref("");
-const droneData = [
-  {
-    test1: "test1",
-    test2: "test2",
-    test3: "test3",
-    lookInfo: "Tom",
-  },
-];
+var username = ref("");
+const logOut = () => {
+  router.replace({ name: "LoginPage" });
+};
 </script>
     
 <style scoped>

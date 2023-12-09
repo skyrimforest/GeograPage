@@ -13,7 +13,7 @@
                 color="rgba(20,20,20,0.8)"
                 @click="onShowClick"
               >
-                功能展开
+                {{ command }}
               </ElButton>
               <ElButton
                 class="show-button"
@@ -71,12 +71,19 @@
               >
                 账户设置
               </ElButton>
+              <ElButton
+                class="show-button"
+                v-show="visible"
+                color="rgba(20,20,20,0.8)"
+                @click="onLogoutClick"
+              >
+                退出登陆
+              </ElButton>
             </ElCol>
           </ElRow>
         </ElMain>
       </ElContainer>
     </div>
-  
   </div>
 </template>
 
@@ -93,32 +100,41 @@ export default {
     ElMain,
   },
   data: () => ({
+    command: "功能展开",
     visible: false,
   }),
   methods: {
     onShowClick() {
+      if (this.visible){
+        this.command="功能展开";
+      }else{
+        this.command="功能折叠";
+      }
       this.visible = !this.visible;
     },
     onShowEventClick() {
-      this.$router.replace({name: 'FuncEvent'});
+      this.$router.replace({ name: "FuncEvent" });
     },
     onShowAIClick() {
-      this.$router.replace({name: 'FuncAI'});
+      this.$router.replace({ name: "FuncAI" });
     },
     onShowWhiteListClick() {
-      this.$router.replace({name: 'FuncWhiLi'});
+      this.$router.replace({ name: "FuncWhiLi" });
     },
     onShowStaClick() {
-      this.$router.replace({name: 'FuncSta'});
+      this.$router.replace({ name: "FuncSta" });
     },
     onShowDevClick() {
-      this.$router.replace({name: 'FuncDev'});
+      this.$router.replace({ name: "FuncDev" });
     },
     onShowVerClick() {
-      this.$router.replace({name: 'FuncVer'});
+      this.$router.replace({ name: "FuncVer" });
     },
     onShowUserClick() {
-      this.$router.replace({name: 'FuncUser'});
+      this.$router.replace({ name: "FuncUser" });
+    },
+    onLogoutClick() {
+      this.$router.replace({ name: "LoginPage" });
     },
   },
 };

@@ -1,9 +1,9 @@
 <template>
   <div class="common-layout">
     <AttrInputBox></AttrInputBox>
-    <div class="menu-box">
+    <!-- <div class="menu-box">
       <DispMenuBox></DispMenuBox>
-    </div>
+    </div> -->
     <div class="info-box">
       <DispInfoBox></DispInfoBox>
     </div>
@@ -21,28 +21,27 @@
 
 <script>
 import MapContainer from "../views/MapContainer.vue";
-import DispMenuBox from "../views/DispMenuBox.vue";
+// import DispMenuBox from "../views/DispMenuBox.vue";
 import DispInfoBox from "../views/DispInfoBox.vue";
 import DispFuncBox from "../views/DispFuncBox.vue";
 // import DispFuncShowBox from "../views/DispFuncShowBox.vue";
-import AttrInputBox from "../views/AttrInputBox.vue";
+// import AttrInputBox from "../views/AttrInputBox.vue";
 export default {
   name: "MainPage",
   components: {
     MapContainer,
-    DispMenuBox,
+    // DispMenuBox,
     DispInfoBox,
     DispFuncBox,
     // DispFuncShowBox,
-    AttrInputBox,
+    // AttrInputBox,
   },
   methods: {},
   data: () => ({}),
 };
 </script>
 
-<style>
-
+<style scoped>
 .common-layout {
   width: 100%;
   height: 100vh;
@@ -84,7 +83,7 @@ export default {
 /* border-radius: 10px;  */
 /* z-index: 3; */
 /* } */
-*/ 
+ 
 .map-box {
   position: relative;
   z-index: 1;
