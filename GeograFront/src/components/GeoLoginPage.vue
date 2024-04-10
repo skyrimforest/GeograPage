@@ -1,13 +1,15 @@
 <template>
   <div class="common-layout">
-    <div class="beg-top-title">无人机防御系统</div>
+    <!-- <div class="beg-top-title">无人机防御系统</div> -->
     <LoginBox></LoginBox>
+    <!-- <NewLoginBox></NewLoginBox> -->
   </div>
 </template>
 
 <script>
 import { ElButton } from "element-plus";
 import LoginBox from "../views/LoginBox.vue";
+
 export default {
   name: "LoginPage",
   components: {
@@ -31,7 +33,7 @@ export default {
   /*overflow-x: hidden;*/
   /*overflow-y: hidden;*/
   background-size: cover !important;
-  background-image: url(../assets/Login.png);
+  background-image: url(../assets/LoginBack.png);
 }
 
 
@@ -46,5 +48,5 @@ export default {
   color: rgba(44, 62, 80, 1);
   background-color: rgba(255, 255, 255, 0.7);
 }
-</style>>
+</style>
 

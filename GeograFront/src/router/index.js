@@ -8,6 +8,7 @@ import DispFuncSta from '../views/DispFuncSta.vue'
 import DispFuncUser from '../views/DispFuncUser.vue'
 import DispFuncVer from '../views/DispFuncVer.vue'
 import DispFuncWhiLi from '../views/DispFuncWhiteList.vue'
+import TEST from "../views/TEST.vue"
 const router = createRouter({
   history: createWebHistory(import.meta.env.BASE_URL),
   routes: [
@@ -15,6 +16,11 @@ const router = createRouter({
       path: '/login',
       name: 'LoginPage',
       component: LoginPage
+    },
+    {
+      path: '/test',
+      name: 'TEST',
+      component: TEST
     },
     {
       path: '/main',

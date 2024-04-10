@@ -14,13 +14,17 @@
     <DispFuncShowBox></DispFuncShowBox>
   </div> -->
     <div class="map-box">
-      <MapContainer></MapContainer>
+      <NewMapContainer></NewMapContainer>
     </div>
   </div>
 </template>
 
 <script>
-import MapContainer from "../views/MapContainer.vue";
+// 地图选型
+// import MapContainer from "../views/MapContainer.vue";
+// import NewMapContainer from "../views/NewMapContainer.vue";
+// import NewMapContainer from "../views/NewMapContainer2.vue";
+import NewMapContainer from "../views/NewMapNoSetup2.vue";
 // import DispMenuBox from "../views/DispMenuBox.vue";
 import DispInfoBox from "../views/DispInfoBox.vue";
 import DispFuncBox from "../views/DispFuncBox.vue";
@@ -29,7 +33,7 @@ import DispFuncBox from "../views/DispFuncBox.vue";
 export default {
   name: "MainPage",
   components: {
-    MapContainer,
+    NewMapContainer,
     // DispMenuBox,
     DispInfoBox,
     DispFuncBox,
