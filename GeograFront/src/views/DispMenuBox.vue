@@ -59,7 +59,8 @@ export default {
 };
 </script>
 
-<style>
+
+<style scoped>
 .button-container {
   background-color: rgba(20, 20, 20, 0.8);
   backdrop-filter: blur(30px);

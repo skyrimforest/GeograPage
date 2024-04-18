@@ -73,20 +73,14 @@ export default {
 }
 .func-box {
   position: absolute;
-  bottom: 20px;
-  left: 20px;
+  bottom: 1%;
+  left: 1%;
   backdrop-filter: blur(0px);
   border-radius: 10px;
   z-index: 3;
+  width:98%;
+  height:70%;
 }
-/* .func-show-box{
-  position:absolute;
-  bottom:330px;
-  left:15px;
-  /* backdrop-filter: blur(30px); */
-/* border-radius: 10px;  */
-/* z-index: 3; */
-/* } */
  
 .map-box {
   position: relative;

@@ -3,8 +3,8 @@
     <ElContainer>
       <ElHeader>设备管理</ElHeader>
       <ElContainer>
-        <ElAside width="180px">
-          <ElScrollbar height="260px">
+        <ElAside width="200px">
+          <ElScrollbar height="700px">
             <el-menu
               active-text-color="#ffd04b"
               background-color="#545c64"
@@ -46,7 +46,7 @@
           </ElScrollbar>
         </ElAside>
         <ElMain style="--el-main-padding: 0px">
-          <ElScrollbar height="260px">
+          <ElScrollbar style="height: 700px;">
             <ElTable
               :data="droneData"
               style="width: 100%"
@@ -84,6 +84,7 @@
 
 
 <script setup>
+
 import { ref } from "vue";
 const droneData = [
   {
@@ -93,6 +94,7 @@ const droneData = [
     lookInfo: "Tom",
   },
 ];
+
 const handleOpen = (key, keyPath) => {
   console.log(key, keyPath);
 };
@@ -101,20 +103,4 @@ const handleClose = (key, keyPath) => {
 };
 </script>
     
-<style scoped>
-.el-header {
-  height: 40px;
-  padding: 10px;
-}
-.func-container {
-  background-color: rgba(20, 20, 20, 0.8);
-  backdrop-filter: blur(30px);
-  border-radius: 10px;
-  width: 900px;
-  height: 300px;
-}
-.placeholder-box {
-  width: 300px;
-  height: 150px;
-}
-</style>
+<style scoped src="../styles/dispbox.css"></style>

@@ -1,32 +1,35 @@
 <template>
   <div class="func-container">
     <ElContainer>
-      <ElHeader>无人机白名单</ElHeader>
-      <ElMain style="--el-main-padding: 0px">
-        <ElScrollbar height="170px">
-          <ElTable
-            :data="droneData"
-            style="width: 100%"
-            :row-class-name="tableRowClassName"
-          >
+      <ElHeader>
+        <ElRow>
+          <ElCol :span="4">
+            无人机白名单
+          </ElCol>
+          <ElCol :span="16">
+          </ElCol>
+          <ElCol :span="4">
+            <ElButton @click="add_white">
+              添加白名单
+            </ElButton>
+            <ElButton @click="export_white">
+              导出白名单
+            </ElButton>
+            <ElButton @click="import_white">
+              引入白名单
+            </ElButton>
+          </ElCol>
+        </ElRow>
+      </ElHeader>
+      <ElMain style="--el-main-padding: 0px;height: 100%">
+        <ElScrollbar style="height: 700px;">
+          <ElTable :data="droneData" style="width: 100%" :row-class-name="tableRowClassName">
             <ElTableColumn prop="test1" label="列1" width="180" />
             <ElTableColumn prop="test2" label="列2" width="180" />
             <ElTableColumn prop="lookInfo" label="查看详情">
               <template #default="scope">
-                <el-button
-                  link
-                  type="primary"
-                  size="small"
-                  @click="handleClick(scope.$index)"
-                  >展示1</el-button
-                >
-                <el-button
-                  link
-                  type="primary"
-                  size="small"
-                  @click="handleClick(scope.$index)"
-                  >展示2</el-button
-                >
+                <el-button link type="primary" size="small" @click="handleClick(scope.$index)">展示1</el-button>
+                <el-button link type="primary" size="small" @click="handleClick(scope.$index)">展示2</el-button>
               </template>
             </ElTableColumn>
             <ElTableColumn prop="test3" label="列3" width="180" />
@@ -49,22 +52,15 @@ const droneData = [
     lookInfo: "Tom",
   },
 ];
+function add_white(){
+  console.log("添加")
+}
+function export_white(){
+  console.log("导出")
+}
+function import_white(){
+  console.log("引入")
+}
 </script>
-    
-<style scoped>
-.el-header{
-    height: 40px;
-    padding: 10px;
-}
-.func-container {
-  background-color: rgba(20, 20, 20, 0.8);
-  backdrop-filter: blur(30px);
-  border-radius: 10px;
-  width: 900px;
-  height: 300px;
-}
-.placeholder-box {
-  width: 300px;
-  height: 150px;
-}
-</style>
+
+<style scoped src="../styles/dispbox.css"></style>

@@ -1,0 +1,26 @@
+.el-header{
+    height: 40px;
+    padding: 10px;
+}
+.func-container {
+    background-color: rgba(20, 20, 20, 0);
+    backdrop-filter: blur(30px);
+    border-radius: 10px;
+    width: 900px;
+    height: 300px;
+  }
+  .placeholder-box {
+    width: 300px;
+    height: 150px;
+  }
+  .func-show-container {
+    background-color: rgba(200, 200, 200, 0);
+    align-items: center;
+    /* backdrop-filter: blur(30px); */
+    /* border-radius: 10px; */
+    width: 900px;
+    height: 80px;
+  }
+  .show-button {
+    width: 80px;
+  }

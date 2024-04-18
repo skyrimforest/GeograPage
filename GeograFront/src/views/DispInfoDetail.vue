@@ -153,7 +153,7 @@
   };
   </script>
   
-  <style>
+  <style scoped>
   .info-container {
     width: 300px;
     height: 300px;
@@ -180,3 +180,4 @@
     color: red;
   }
   </style>
+  

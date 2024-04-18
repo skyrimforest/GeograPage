@@ -101,17 +101,4 @@ export default {
   },
 };
 </script>
-
-<style>
-.func-show-container {
-  background-color: rgba(200, 200, 200, 0);
-  align-items: center;
-  /* backdrop-filter: blur(30px); */
-  /* border-radius: 10px; */
-  width: 900px;
-  height: 80px;
-}
-.show-button {
-  width: 80px;
-}
-</style>
+<style scoped src="../styles/dispbox.css"></style>

@@ -114,11 +114,6 @@ function onNewCircleClick() {
 }
 const polyList = []
 
-
-
-
-
-
 </script>
 
 <style scoped>

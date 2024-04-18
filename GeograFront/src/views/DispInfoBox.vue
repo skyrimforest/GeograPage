@@ -156,6 +156,8 @@ export default {
 };
 </script>
 
+
+<style scoped src="../styles/dispbox.css"></style>
 <style scoped>
 .el-header {
   padding: 10px;

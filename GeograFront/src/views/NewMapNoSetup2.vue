@@ -96,15 +96,23 @@ export default {
                 // 缩放只到12,空间需要太多了
                 {
                     name: "高德离线中国卫星图",
-                    layer_url: 'http://localhost:9999/user/images/whole/{z}/{x}/{y}.jpg',
-                },
-                {
-                    name: "高德离线上海卫星图",
-                    layer_url: 'http://localhost:9999/user/images/shanghai/{z}/{x}/{y}.jpg',
+                    layer_url: 'http://localhost:9999/map/images/whole/{z}/{x}/{y}.jpg',
                 },
                 {
                     name: "高德离线北京卫星图",
-                    layer_url: 'http://localhost:9999/user/images/beijing/{z}/{x}/{y}.jpg',
+                    layer_url: 'http://localhost:9999/map/images/beijing/{z}/{x}/{y}.jpg',
+                },
+                {
+                    name: "高德离线上海卫星图",
+                    layer_url: 'http://localhost:9999/map/images/shanghai/{z}/{x}/{y}.jpg',
+                },
+                {
+                    name: "高德离线广州卫星图",
+                    layer_url: 'http://localhost:9999/map/images/guangzhou/{z}/{x}/{y}.jpg',
+                },
+                {
+                    name: "高德离线深圳卫星图",
+                    layer_url: 'http://localhost:9999/map/images/shenzhen/{z}/{x}/{y}.jpg',
                 },
             ],
             State: {

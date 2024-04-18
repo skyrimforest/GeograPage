@@ -1,36 +1,18 @@
 <template>
   <div class="func-container">
     <ElContainer>
-      <ElHeader>未知Wifi无人机名单</ElHeader>
+      <ElHeader>
+        <el-menu :default-active="1" mode="horizontal">
+          <el-menu-item index="1" @click="jump2drone">未知Wifi无人机名单</el-menu-item>
+          <el-menu-item index="2" @click="jump2signal">信号学习</el-menu-item>
+          <el-menu-item index="3" @click="jump2universe">通用检测器</el-menu-item>
+          <el-menu-item index="4" @click="jump2unknown">未知信号</el-menu-item>
+        </el-menu>
+      </ElHeader>
       <ElMain style="--el-main-padding: 0px">
-        <ElScrollbar height="170px">
-          <ElTable
-            :data="droneData"
-            style="width: 100%"
-            :row-class-name="tableRowClassName"
-          >
-            <ElTableColumn prop="test1" label="列1" width="180" />
-            <ElTableColumn prop="test2" label="列2" width="180" />
-            <ElTableColumn prop="lookInfo" label="查看详情">
-              <template #default="scope">
-                <el-button
-                  link
-                  type="primary"
-                  size="small"
-                  @click="handleClick(scope.$index)"
-                  >展示1</el-button
-                >
-                <el-button
-                  link
-                  type="primary"
-                  size="small"
-                  @click="handleClick(scope.$index)"
-                  >展示2</el-button
-                >
-              </template>
-            </ElTableColumn>
-            <ElTableColumn prop="test3" label="列3" width="180" />
-          </ElTable>
+        <ElScrollbar height="700px">
+          <router-view>
+          </router-view>
         </ElScrollbar>
       </ElMain>
     </ElContainer>
@@ -41,6 +23,9 @@
 
 <script setup>
 import { ref } from "vue";
+import { useRouter } from "vue-router";
+const router = useRouter();
+
 const droneData = [
   {
     test1: "test1",
@@ -49,22 +34,21 @@ const droneData = [
     lookInfo: "Tom",
   },
 ];
+function jump2drone() {
+  router.push({ name: "AIDrone" })
+
+}
+function jump2signal() {
+  router.push({ name: "AISig" })
+
+}
+function jump2universe() {
+  router.push({ name: "AIUni" })
+
+}
+function jump2unknown() {
+  router.push({ name: "AIUnk" })
+
+}
 </script>
-    
-<style scoped>
-.el-header{
-    height: 40px;
-    padding: 10px;
-}
-.func-container {
-  background-color: rgba(20, 20, 20, 0.8);
-  backdrop-filter: blur(30px);
-  border-radius: 10px;
-  width: 900px;
-  height: 300px;
-}
-.placeholder-box {
-  width: 300px;
-  height: 150px;
-}
-</style>
+<style scoped src="../styles/dispbox.css"></style>
